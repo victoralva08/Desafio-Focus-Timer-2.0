@@ -19,6 +19,11 @@ const rainSound = document.querySelector(".rain")
 const commerceSound = document.querySelector(".commerce")
 const bonfireSound = document.querySelector(".bonfire")
 
+const svgForest = document.querySelector(".svgForest")
+const svgRain = document.querySelector(".svgRain")
+const svgCommerce = document.querySelector(".svgCommerce")
+const svgBonfire = document.querySelector(".svgBonfire")
+
 
 // Funções
 
@@ -67,16 +72,24 @@ btnReduceTime.addEventListener('click', () => { controls.reduceTime() })
 
 forestSound.addEventListener('click', () => {
   togglePlay(sound.forestAudio)
+  forestSound.classList.toggle('selected')
+  svgForest.classList.toggle('color')
 })
 
 rainSound.addEventListener("click", () => {
   togglePlay(sound.rainAudio)
+  rainSound.classList.toggle("selected")
+  svgRain.classList.toggle("color")
 })
 
 commerceSound.addEventListener("click", () => {
   togglePlay(sound.commerceAudio)
+  commerceSound.classList.toggle("selected")
+  svgCommerce.classList.toggle("color")
 })
 
 bonfireSound.addEventListener("click", () => {
   togglePlay(sound.bonfireAudio)
+  bonfireSound.classList.toggle("selected")
+  svgBonfire.classList.toggle("color")
 })
